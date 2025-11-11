@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Vendedor.nav_fragment_vendedor.FragmentInicioV">
+
+    <!--Contenedor para fragmentos-->
+    <FrameLayout
+        android:id="@+id/botonFragmento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--Barra Inferior-->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/botonAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabAlignmentMode="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/botonNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_boton"/>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!--Boton flotante-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
+        android:background="@color/celesteclaro"
+        android:src="@drawable/icono_agregar"
+        app:tint="@android:color/white"
+        android:layout_marginBottom="30dp"
+        app:layout_anchor="@id/botonAppBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

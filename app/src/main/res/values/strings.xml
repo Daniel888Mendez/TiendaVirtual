@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tienda Virtual</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+
+    <!--Registro vendedor-->
+    <string name="txtRegistroV">Registro de Vendedor</string>
+    <string name="etNombreV">Nombre Completo</string>
+    <string name="etEmailV">Email</string>
+    <string name="etPasswordV">Password</string>
+    <string name="etCPasswordV">Confirmar Password</string>
+    <string name="btnregistrarV">Registrarme</string>
+</resources>

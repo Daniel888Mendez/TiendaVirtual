@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shoIn="navigation_view">
+    <group
+        android:id="@+id/gropo_id"
+        android:checkableBehavior="single">
+        <item
+            android:title="Inicio"
+            android:icon="@drawable/icono_inicio"
+            android:id="@+id/icicio_menu"/>
+
+        <item
+            android:title="Mi Tienda"
+            android:icon="@drawable/icono_tienda"
+            android:id="@+id/mitienda_menu"/>
+        <item
+            android:title="Reseñas"
+            android:icon="@drawable/icono_resenia"
+            android:id="@+id/reseñas_menu"/>
+    </group>
+
+    <item
+        android:title="Cerrar Sesion"
+        android:icon="@drawable/icono_cerrarsesion"
+        android:id="@+id/cerrar_menu"/>
+
+</menu>
