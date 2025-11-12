@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">Tienda Virtual</string>
+    <string name="txt_bienvenida">Bienvenido(a)</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close drawer</string>
+
+    <!--NavigationDrawer Vendedor-->
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mi_tienda_v">Mi Tienda</string>
+    <string name="op_resenia_v">Reseñas</string>
+    <string name="op_cerrer_sesion_v">Cerrar Sesion</string>
+
+    <!--NavigationDrawer Cliente-->
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_mi_perfil_c">Mi Perfil</string>
+    <string name="op_cerrer_sesion_c">Cerrar Sesion</string>
+
+    <!--Botton Navigation Bar Cliente-->
+    <string name="op_tienda_c">Tienda</string>
+    <string name="op_mi_ordenes_c">Mis Ordenes</string>
 
 
     <!--Registro vendedor-->
