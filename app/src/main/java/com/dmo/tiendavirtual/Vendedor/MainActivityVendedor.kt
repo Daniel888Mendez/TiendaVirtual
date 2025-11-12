@@ -1,5 +1,6 @@
 package com.dmo.tiendavirtual.Vendedor
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.MenuItem
@@ -18,10 +19,12 @@ import com.dmo.tiendavirtual.Vendedor.nav_fragment_vendedor.FragmentMiTiendaV
 import com.dmo.tiendavirtual.Vendedor.nav_fragment_vendedor.FragmentResenia
 import com.dmo.tiendavirtual.databinding.ActivityMainVendedorBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
 
     private lateinit var binding: ActivityMainVendedorBinding
+    private  var firebaseAuth : FirebaseAuth?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,8 @@ class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationIt
         //Obtener Vistas
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        firebaseAuth= FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -49,6 +54,16 @@ class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationIt
 
         replaceFragment(FragmentInicioV())
         binding.navigationView.setCheckedItem(R.id.icicio_menu)
+    }
+
+    private fun comprobarSesion() {
+        //Si el usuario no ha iniciado sesion lo manda a la activiti de registro
+        if (firebaseAuth!!.currentUser==null){
+            startActivity(Intent(applicationContext, RegistroVendedorActivity::class.java))
+            Toast.makeText(applicationContext,"Vendedor no registrado o logueado", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(applicationContext,"Vendedor en linea", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {
