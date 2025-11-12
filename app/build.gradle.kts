@@ -47,7 +47,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.firebaseAuth) //Autenticacion con firebase
-
+    implementation(libs.firebaseDatabase)//Base de Datos
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.coordinatorlayout)
