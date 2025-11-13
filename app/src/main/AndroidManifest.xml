@@ -14,13 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaVirtual">
         <activity
-            android:name=".Vendedor.LoginVendedorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Vendedor.RegistroVendedorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Vendedor.MainActivityVendedor"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Vendedor.LoginVendedorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vendedor.RegistroVendedorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vendedor.MainActivityVendedor"
+            android:exported="false"/>
         <activity
             android:name=".Cliente.MainActivityCliente"
             android:exported="false" />

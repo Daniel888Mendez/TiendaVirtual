@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.lottie)//Animacion
     implementation(libs.firebaseAuth) //Autenticacion con firebase
     implementation(libs.firebaseDatabase)//Base de Datos
     implementation(libs.androidx.activity)

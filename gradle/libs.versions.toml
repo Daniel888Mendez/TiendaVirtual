@@ -13,6 +13,7 @@ coordinatorlayout = "1.3.0"
 googleServiceV="4.4.4"
 firebaseAuth="24.0.0"
 firebaseDatabaseV="22.0.1"
+lottieV="4.2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,7 +27,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout" }
 firebaseAuth={group="com.google.firebase",name="firebase-auth",version.ref="firebaseAuth"}
 firebaseDatabase={group="com.google.firebase",name="firebase-database",version.ref="firebaseDatabaseV"}
-
+lottie={group="com.airbnb.android",name="lottie",version.ref="lottieV"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
