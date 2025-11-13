@@ -40,4 +40,10 @@
     <string name="txtNoCuenta">¿No tienes Cuenta?</string>
     <string name="tvRegistrarV">Registrarme</string>
 
+    <!--Login cliente-->
+    <string name="txtLoginC">Login de Cliente</string>
+    <string name="btnLoginC">Ingresar</string>
+    <string name="txtNoCuentaC">¿No tienes Cuenta?</string>
+    <string name="tvRegistrarC">Registrarme</string>
+
 </resources>
