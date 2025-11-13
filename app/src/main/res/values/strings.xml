@@ -28,6 +28,12 @@
     <string name="etPasswordV">Password</string>
     <string name="etCPasswordV">Confirmar Password</string>
     <string name="btnregistrarV">Registrarme</string>
+
+    <!--Registro cliente-->
+    <string name="txtRegistroC">Registro de Cliente</string>
+    <string name="etNombreC">Nombre Completo</string>
+    <string name="btnregistrarC">Registrarme</string>
+
     <!--Login vendedor-->
     <string name="txtLoginV">Login de Vendedor</string>
     <string name="btnLogin">Ingresar</string>
