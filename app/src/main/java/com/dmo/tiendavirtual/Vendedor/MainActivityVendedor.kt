@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.dmo.tiendavirtual.R
+import com.dmo.tiendavirtual.SeleccionarTipoActivity
 import com.dmo.tiendavirtual.Vendedor.Boton_Nav_Fragmrento.FragmentMisProductos
 import com.dmo.tiendavirtual.Vendedor.Boton_Nav_Fragmrento.FragmentOrdenesV
 import com.dmo.tiendavirtual.Vendedor.nav_fragment_vendedor.FragmentInicioV
@@ -57,14 +58,14 @@ class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationIt
 
     private  fun cerrarSesion(){
         firebaseAuth!!.signOut()
-        startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
         finish()
         Toast.makeText(applicationContext,"Has cerrado la sesion", Toast.LENGTH_SHORT).show()
     }
     private fun comprobarSesion() {
         //Si el usuario no ha iniciado sesion lo manda a la activiti de registro
         if (firebaseAuth!!.currentUser==null){
-            startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+            startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
             Toast.makeText(applicationContext,"Vendedor no registrado o logueado", Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(applicationContext,"Vendedor en linea", Toast.LENGTH_SHORT).show()
