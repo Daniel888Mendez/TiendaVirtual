@@ -14,6 +14,8 @@ googleServiceV="4.4.4"
 firebaseAuth="24.0.0"
 firebaseDatabaseV="22.0.1"
 lottieV="4.2.1"
+mapsV="18.2.0"
+placeV="3.5.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +30,8 @@ androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coo
 firebaseAuth={group="com.google.firebase",name="firebase-auth",version.ref="firebaseAuth"}
 firebaseDatabase={group="com.google.firebase",name="firebase-database",version.ref="firebaseDatabaseV"}
 lottie={group="com.airbnb.android",name="lottie",version.ref="lottieV"}
+maps={group="com.google.android.gms",name="play-services-maps",version.ref="mapsV"}
+places={group="com.google.android.libraries.places",name="places",version.ref="placeV"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

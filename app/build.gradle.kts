@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.lottie)//Animacion
     implementation(libs.firebaseAuth) //Autenticacion con firebase
     implementation(libs.firebaseDatabase)//Base de Datos
+    implementation(libs.maps)//Google Maps
+    implementation(libs.places)//Lugares para googleMaps
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.coordinatorlayout)
