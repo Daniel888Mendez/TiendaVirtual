@@ -52,4 +52,19 @@
     <string name="txtNoCuentaC">¿No tienes Cuenta?</string>
     <string name="tvRegistrarC">Registrarme</string>
 
+    <!--Perfil cliente-->
+    <string name="txtMiPerfil">Mi Perfil</string>
+    <string name="nombreCPerfil">Nombre completo</string>
+    <string name="emailCPerfil">Email</string>
+    <string name="dniCPerfil">Dni</string>
+    <string name="telefonoCPerfil">Telefono</string>
+    <string name="fechaRegistroCPerfil">Fecha de registro</string>
+    <string name="btnGuardarInfoC">Guardar</string>
+    <string name="ubicacionCPerfil">Ubicacion</string>
+    <string name="btnAddUbicacion">Añadir Ubicacion</string>
+    <string name="btnActualizar">Actualizar</string>
+
+
+
+
 </resources>

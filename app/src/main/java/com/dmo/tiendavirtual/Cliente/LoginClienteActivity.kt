@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.dmo.tiendavirtual.Vendedor.MainActivityVendedor
 import com.dmo.tiendavirtual.databinding.ActivityLoginClienteBinding
-import com.dmo.tiendavirtual.databinding.ActivitySeleccionarTipoBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginClienteActivity : AppCompatActivity() {

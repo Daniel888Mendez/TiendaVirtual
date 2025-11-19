@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.firebaseDatabase)//Base de Datos
     implementation(libs.maps)//Google Maps
     implementation(libs.places)//Lugares para googleMaps
+    implementation(libs.circleImg)//Imagenes circulares
+    implementation(libs.imagePicker)//Recortar imagen
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.coordinatorlayout)

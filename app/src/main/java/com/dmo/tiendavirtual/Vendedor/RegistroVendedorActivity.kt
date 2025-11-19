@@ -95,6 +95,7 @@ class RegistroVendedorActivity : AppCompatActivity() {
         val emailBD=email
         val tipoUsuario="Vendedor"
         val tiempoBD= Constantes().obtenerTiempo()
+        val fecha= Constantes().obtenerFecha(tiempoBD)
 
         val datosVendedor= HashMap<String, Any>()
 
@@ -102,7 +103,7 @@ class RegistroVendedorActivity : AppCompatActivity() {
         datosVendedor["nombreBD"] = "${nombreBD}"
         datosVendedor["emailBD"] = "${emailBD}"
         datosVendedor["tipoUsuario"] = "${tipoUsuario}"
-        datosVendedor["tiempoBD"] = "${tiempoBD}"
+        datosVendedor["tiempoBD"] = "${fecha}"
 
         val references= FirebaseDatabase.getInstance().getReference("Usuarios")
         references.child(uidBD!!)

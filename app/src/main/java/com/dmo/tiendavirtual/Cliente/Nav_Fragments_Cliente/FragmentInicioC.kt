@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.dmo.tiendavirtual.Cliente.Botton_Nav_Fragments_Cliente.FragmentMisOrdenesC
 import com.dmo.tiendavirtual.Cliente.Botton_Nav_Fragments_Cliente.FragmentTiendaC
 import com.dmo.tiendavirtual.R
-import com.dmo.tiendavirtual.databinding.ActivityMainVendedorBinding
 import com.dmo.tiendavirtual.databinding.FragmentInicioCBinding
 
 class FragmentInicioC : Fragment() {

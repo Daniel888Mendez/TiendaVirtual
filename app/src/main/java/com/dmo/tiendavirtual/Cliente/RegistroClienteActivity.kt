@@ -7,7 +7,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dmo.tiendavirtual.Constantes
-import com.dmo.tiendavirtual.R
+import com.dmo.tiendavirtual.common.ToastUtils
 import com.dmo.tiendavirtual.databinding.ActivityRegistroClienteBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -28,7 +28,7 @@ class RegistroClienteActivity : AppCompatActivity() {
         progressDialog.setCanceledOnTouchOutside(false)
 
         binding.btnregistrarC.setOnClickListener {
-            Toast.makeText(this, "prueba", Toast.LENGTH_SHORT).show()
+          //  Toast.makeText(this, "prueba", Toast.LENGTH_SHORT).show()
             validarInformacion()
         }
 
@@ -76,8 +76,8 @@ class RegistroClienteActivity : AppCompatActivity() {
                 insertarInfoBD()
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Fallo en el registro CAUSA: ${e.message}", Toast.LENGTH_SHORT)
-                    .show()
+                ToastUtils.showToast(this,"Fallo en el registro CAUSA: ${e.message}", Toast.LENGTH_SHORT)
+                progressDialog.hide()
             }
     }
 
@@ -87,13 +87,16 @@ class RegistroClienteActivity : AppCompatActivity() {
         val nombreC = nombre
         val emailC = email
         val tiempoRegistro = Constantes().obtenerTiempo()
+        val fecha= Constantes().obtenerFecha(tiempoRegistro)
 
         val datosClientes = HashMap<String, Any>()
 
         datosClientes["uid"] = "$uid"
         datosClientes["nombre"] = "$nombreC"
         datosClientes["email"] = "$emailC"
-        datosClientes["tiempoRegistro"] = "$tiempoRegistro"
+        datosClientes["telefono"]
+        datosClientes["provedor"]= "email"
+        datosClientes["fechaRegistro"] = "Fecha de Registro: $fecha"
         datosClientes["imagen"] = ""
         datosClientes["tipoUsuario"] = "Cliente"
 

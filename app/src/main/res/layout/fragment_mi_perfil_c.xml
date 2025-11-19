@@ -1,17 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Cliente.Nav_Fragments_Cliente.FragmentMiPerfilC">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="MI PERFIL"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/toolbarRL"
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+            <TextView
+                android:text="@string/txtMiPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ccc"/>
+
+
+
+        </RelativeLayout>
+
+
+<!--Informacion Usuario tipo Cliente-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgCPerfil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_perfil"
+                android:layout_marginBottom="15dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Nombres-->
+                <EditText
+                    android:id="@+id/nombreCPerfil"
+                    android:hint="@string/nombreCPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+                <!--email-->
+                <EditText
+                    android:id="@+id/emailCPerfil"
+                    android:hint="@string/emailCPerfil"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+                <!--DNI-->
+                <EditText
+                    android:id="@+id/dniCPerfil"
+                    android:hint="@string/dniCPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <!--Telefono-->
+                <EditText
+                    android:id="@+id/telefonoCPerfil"
+                    android:hint="@string/telefonoCPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+                <!--Ubicacion-->
+                <EditText
+                    android:id="@+id/ubicacionCPerfil"
+                    android:hint="@string/ubicacionCPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp">
+                <!--Fecha Registro-->
+                <TextView
+                    android:hint="@string/fechaRegistroCPerfil"
+                    android:id="@+id/fechaRegistroCPerfil"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--Boton Guardar-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActualizar"
+                android:text="@string/btnActualizar"
+                android:layout_gravity="center"
+                app:cornerRadius="8dp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

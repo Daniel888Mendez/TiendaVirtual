@@ -16,14 +16,14 @@ import com.dmo.tiendavirtual.Cliente.Nav_Fragments_Cliente.FragmentMiPerfilC
 
 
 import com.dmo.tiendavirtual.R
-import com.dmo.tiendavirtual.SeleccionarTipoActivity
+import com.dmo.tiendavirtual.common.SesionUtil
 import com.dmo.tiendavirtual.databinding.ActivityMainClienteBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivityCliente : AppCompatActivity()  , NavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding: ActivityMainClienteBinding
-    private var firebaseAuth: FirebaseAuth?=null
+    private  lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,21 +51,38 @@ class MainActivityCliente : AppCompatActivity()  , NavigationView.OnNavigationIt
 
     }
     private fun comprobarSesion(){
-        if (firebaseAuth!!.currentUser==null){
+        SesionUtil.comprobarSesion(this@MainActivityCliente,firebaseAuth)
+        /*
+
+        firebaseAuth.currentUser?.let { user ->
+            Toast.makeText(this,"Usuario en lilnea prueba ",Toast.LENGTH_SHORT).show()
+        }?:{
+            startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
+            finishAffinity()
+        }
+
+         */
+
+        /*
+        if (firebaseAuth.currentUser==null){
             startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
             finishAffinity()
         }else{
             Toast.makeText(this,"Usuario en lilnea",Toast.LENGTH_SHORT).show()
         }
+
+         */
     }
     private fun  cerrarSesion(){
-        firebaseAuth!!.signOut()
+
+        SesionUtil.cerrarSesion(this,firebaseAuth)
+        /*
+        firebaseAuth.signOut()
         startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
         finishAffinity()
         Toast.makeText(this,"Cerraste sesion",Toast.LENGTH_SHORT).show()
 
-
-
+         */
     }
 
     private fun replaceFragment(fragment: Fragment) {
