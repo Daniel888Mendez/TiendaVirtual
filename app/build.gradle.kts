@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.places)//Lugares para googleMaps
     implementation(libs.circleImg)//Imagenes circulares
     implementation(libs.imagePicker)//Recortar imagen
+    implementation(libs.storege)//Subir archivos multimedia
+    implementation(libs.glide)//Leer imagenes
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.coordinatorlayout)

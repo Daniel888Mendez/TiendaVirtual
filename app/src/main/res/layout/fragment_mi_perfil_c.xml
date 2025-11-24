@@ -42,7 +42,7 @@
 
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imgCPerfil"
+                android:id="@+id/profileImageView"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
@@ -134,19 +134,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!--Boton Guardar-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnActualizar"
@@ -156,6 +143,17 @@
                 android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
+            <!--Boton Imagen-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileImageView22"
+                android:text="Agregar Imagen"
+                android:layout_gravity="center"
+                app:cornerRadius="8dp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
 
 
         </LinearLayout>
