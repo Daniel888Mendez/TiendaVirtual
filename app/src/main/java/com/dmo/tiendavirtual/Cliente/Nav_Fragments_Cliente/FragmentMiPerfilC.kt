@@ -3,6 +3,7 @@ package com.dmo.tiendavirtual.Cliente.Nav_Fragments_Cliente
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import com.dmo.tiendavirtual.MapaSeleccionActivity
 import com.dmo.tiendavirtual.databinding.FragmentMiPerfilCBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.auth.FirebaseAuth
@@ -41,6 +43,11 @@ class FragmentMiPerfilC : Fragment() {
         binding.profileImageView.setOnClickListener {
             seleccionarImg()
         }
+
+        binding.btnAddUbicacion.setOnClickListener {
+            val intent = Intent(requireContext(), MapaSeleccionActivity::class.java)
+            mapaResult.launch(intent)
+        }
         return binding.root
     }
 
@@ -53,6 +60,17 @@ class FragmentMiPerfilC : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         leerInformacion()
 
+    }
+    private val mapaResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val lat = result.data?.getDoubleExtra("lat", 0.0) ?: 0.0
+            val lng = result.data?.getDoubleExtra("lng", 0.0) ?: 0.0
+
+            val ubicacion = "$lat,$lng"
+            binding.ubicacionCPerfil.setText(ubicacion)
+        }
     }
 
     private fun leerInformacion() {
@@ -67,12 +85,15 @@ class FragmentMiPerfilC : Fragment() {
                     val imagen = snapshot.child("imagen").value?.toString() ?: ""
                     val telefono = snapshot.child("telefono").value?.toString() ?: ""
                     val fecha = snapshot.child("fechaRegistro").value?.toString() ?: ""
+                    val ubicacion = snapshot.child("ubicacion").value?.toString() ?: ""
+
 
                     binding.nombreCPerfil.setText(nombre)
                     binding.emailCPerfil.setText(email)
                     binding.dniCPerfil.setText(dni)
                     binding.telefonoCPerfil.setText(telefono)
                     binding.fechaRegistroCPerfil.setText(fecha)
+                    binding.ubicacionCPerfil.setText(ubicacion)
 
                     // Mostrar imagen si existe URL
                     if (imagen.isNotEmpty()) {
@@ -160,6 +181,10 @@ class FragmentMiPerfilC : Fragment() {
         val telefonoC = binding.telefonoCPerfil.text.toString()
         val fecha = binding.fechaRegistroCPerfil.text.toString()
         val datosClientes = HashMap<String, Any>()
+        val ubicacionC = binding.ubicacionCPerfil.text.toString()
+        val asignatura = binding.asignatura.text.toString()
+        datosClientes["ubicacion"] = ubicacionC
+        datosClientes["asignatura"] = asignatura
         datosClientes["uid"] = uid
         datosClientes["nombre"] = nombreC
         datosClientes["email"] = emailC

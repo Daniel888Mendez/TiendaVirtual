@@ -64,7 +64,8 @@
     <string name="btnAddUbicacion">Añadir Ubicacion</string>
     <string name="btnActualizar">Actualizar</string>
 
-
+    <!--Mapa-->
+    <string name="btnAddUbication">Añadir Ubicacion</string>
 
 
 </resources>

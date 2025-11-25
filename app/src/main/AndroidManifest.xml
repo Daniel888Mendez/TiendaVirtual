@@ -7,13 +7,13 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/><!--ubicacion precisa via gps-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/><!--ubicacion no precisa via wifi-->
-    <uses-permission android:name="android.permission.CAMERA"/><!--uso de la camara-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/><!--ubicacion no precisa via wifi-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage"/><!--ubicacion no precisa via wifi-->
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- ubicacion precisa via gps -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- ubicacion no precisa via wifi -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- uso de la camara -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- ubicacion no precisa via wifi -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +24,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaVirtual">
+        <activity
+            android:name=".MapaSeleccionActivity"
+            android:exported="false" />
         <activity
             android:name=".SeleccionarTipoActivity"
             android:exported="false" />
@@ -57,10 +60,8 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_api_key" />
-
+            android:value="AIzaSyCqKrAvC7-hF1A8kdd9WS8bQbMnd6P_A4A"
+            tools:replace="android:value" />
     </application>
-
-
 
 </manifest>
